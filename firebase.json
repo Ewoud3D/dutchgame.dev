@@ -5,6 +5,11 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "redirects": [ {
+      "source": "/mix",
+      "destination": "https://forms.gle/FdMW9uUrqNYFP1S78",
+      "type": 301
+    }]
   }
 }

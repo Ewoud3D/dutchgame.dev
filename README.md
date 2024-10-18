@@ -1,5 +1,4 @@
-# ewoud.dev
+# DutchGame.Dev
+DutchGame.Dev aims to be a community owned hub for everyone interested in game development in The Netherlands.
 
-Welcome to the repository for my personal website! This site showcases my skills, projects, and experiences. It serves as a central hub to highlight my work, background, and how to get in touch with me.
-
-You can view the live website here: [ewoud.dev](https://ewoud.dev/)
+For that reason DutchGame.Dev is to be developed Open Source.

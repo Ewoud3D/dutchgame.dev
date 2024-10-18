@@ -1,0 +1,18 @@
+.navbar {
+    height: 70px;
+}
+
+.nav-item {
+    position: relative;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.nav-item:hover > a::before {
+    content: '.';
+    position: absolute;
+    color: blue;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: blue;
+    transform: translate(calc(-100% - 1px), -2px);
+}

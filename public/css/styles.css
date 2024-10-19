@@ -1,18 +1,81 @@
+:root {
+    --accent: #830EB0;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 .navbar {
     height: 70px;
+    background-color: yellow !important;
 }
 
 .nav-item {
     position: relative;
     padding-left: 20px;
     font-size: 18px;
+    font-family: "Poppins";
 }
 
 .nav-item:hover > a::before {
     content: '.';
     position: absolute;
-    color: blue;
+    color: var(--accent);
     -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: blue;
-    transform: translate(calc(-100% - 1px), -2px);
+    -webkit-text-stroke-color: var(--accent);
+    transform: translate(calc(-100% - 2px), -2px);
+}
+
+.active::before {
+    content: '.';
+    position: absolute;
+    color: var(--accent);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: var(--accent);
+    transform: translate(calc(-100% - 2px), -2px);
+}
+
+.nav-logo {
+    position: absolute;
+    width: 150px;
+    top: 20px;
+    z-index: 1;
+}
+
+.jumbotron {
+    background-image: url("../img/SCHiM.png");
+    background-size: cover;
+    background-position: center; 
+    padding-top: 260px;
+    padding-bottom: 260px;
+    position: relative;
+}
+
+.jumbotron > .container > h1 {
+    text-align: right;
+    font-family: "Poppins";
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.game-credits {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(36, 54, 66, 0.5);
+    border-radius: 10px;
+    padding: 4px 8px 4px 8px;
+    margin-bottom: 12px;
+}
+
+.game-credits > a {
+    text-decoration: none;
+    color: white;
+}
+
+.game-credits > a > .studio {
+    opacity: 0.7;
 }

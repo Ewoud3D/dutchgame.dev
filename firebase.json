@@ -10,6 +10,11 @@
       "source": "/mix",
       "destination": "https://forms.gle/FdMW9uUrqNYFP1S78",
       "type": 301
+    },
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/gT7ddy8Bfm",
+      "type": 301
     }]
   }
 }

@@ -11973,6 +11973,7 @@ textarea.form-control-lg {
 
 .navbar {
   height: 70px;
+  z-index: 1;
 }
 
 .nav-link {
@@ -12008,7 +12009,6 @@ textarea.form-control-lg {
   position: absolute;
   width: 150px;
   top: 20px;
-  z-index: 1;
 }
 
 @media (max-width: 575.98px) {
@@ -12020,8 +12020,8 @@ textarea.form-control-lg {
   background-image: url("../img/SCHiM.png");
   background-size: cover;
   background-position: center;
-  padding-top: 260px;
-  padding-bottom: 260px;
+  padding-top: 280px;
+  padding-bottom: 280px;
   position: relative;
 }
 

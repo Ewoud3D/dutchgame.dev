@@ -11976,6 +11976,58 @@ textarea.form-control-lg {
   z-index: 1;
 }
 
+.navbar-toggler {
+  width: 26px;
+  height: 26px;
+  position: relative;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #212529;
+  border-radius: 1px;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.navbar-toggler .top-bar {
+  margin-top: 0px;
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0px;
+  transform: rotate(45deg);
+}
+
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -15px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 15px;
+  transform: rotate(0deg);
+}
+
 .nav-link {
   transition-duration: 0ms;
 }
@@ -12014,6 +12066,9 @@ textarea.form-control-lg {
 @media (max-width: 575.98px) {
   .nav-logo {
     left: 40px;
+  }
+  .navbar-toggler {
+    margin-right: 16px;
   }
 }
 .jumbotron {

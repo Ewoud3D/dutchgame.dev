@@ -16,6 +16,60 @@ $corner: 4em;
     z-index: 1;
 }
 
+.navbar-toggler {
+    width: 26px;
+    height: 26px;
+    position: relative;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: $dark;
+    border-radius: 1px;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+// When navigation is clicked
+.navbar-toggler .top-bar {
+    margin-top: 0px;
+    transform: rotate(-45deg);
+}
+
+.navbar-toggler .bottom-bar {
+    margin-top: 0px;
+    transform: rotate(45deg);
+}
+
+// State when the navbar is collapsed
+.navbar-toggler.collapsed .top-bar {
+    margin-top: -15px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    margin-top: 15px;
+    transform: rotate(0deg);
+}
+
 .nav-link {
     transition-duration: 0ms;
 }
@@ -54,6 +108,10 @@ $corner: 4em;
 @include media-breakpoint-down(sm) {
     .nav-logo {
         left: 40px;
+    }
+
+    .navbar-toggler {
+        margin-right: 16px;
     }
 }
 

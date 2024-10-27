@@ -138,6 +138,13 @@ $navbar-padding-y: 14px;
     position: relative;
 }
 
+@media (min-width: 1600px) {
+    .jumbotron {
+        padding-top: 330px;
+        padding-bottom: 330px;
+    }
+}
+
 .jumbotron-background {
     z-index: -1;
     top: 0px;

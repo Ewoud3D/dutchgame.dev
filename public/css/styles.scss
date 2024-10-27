@@ -78,8 +78,13 @@ $navbar-padding-y: 14px;
 
 .nav-link {
     transition-duration: 0ms;
-    text-align: center;
-    margin: 20px 16px 0px 0px;
+}
+
+@include media-breakpoint-down(lg) {
+    .nav-link {
+        text-align: center;
+        margin: 20px 16px 0px 0px;
+    }
 }
 
 .nav-item {

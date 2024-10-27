@@ -15,6 +15,10 @@ $corner: 4em;
     height: 70px;
 }
 
+.nav-link {
+    transition-duration: 0ms;
+}
+
 .nav-item {
     position: relative;
     padding-left: 20px;
@@ -45,6 +49,12 @@ $corner: 4em;
     width: 150px;
     top: 20px;
     z-index: 1;
+}
+
+@include media-breakpoint-down(sm) {
+    .nav-logo {
+        left: 40px;
+    }
 }
 
 .jumbotron {

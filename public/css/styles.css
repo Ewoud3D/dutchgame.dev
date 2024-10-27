@@ -11975,6 +11975,10 @@ textarea.form-control-lg {
   height: 70px;
 }
 
+.nav-link {
+  transition-duration: 0ms;
+}
+
 .nav-item {
   position: relative;
   padding-left: 20px;
@@ -12007,6 +12011,11 @@ textarea.form-control-lg {
   z-index: 1;
 }
 
+@media (max-width: 575.98px) {
+  .nav-logo {
+    left: 40px;
+  }
+}
 .jumbotron {
   background-image: url("../img/SCHiM.png");
   background-size: cover;

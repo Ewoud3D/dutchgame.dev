@@ -70,6 +70,12 @@ $navbar-padding-y: 14px;
     transform: rotate(0deg);
 }
 
+@include media-breakpoint-down(sm) {
+    .navbar-toggler {
+        margin-right: 16px;
+    }
+}
+
 // .collapsing {
 //     -webkit-transition: none;
 //     transition: none;
@@ -112,20 +118,15 @@ $navbar-padding-y: 14px;
     transform: translate(calc(-100% - 2px), -2px);
 }
 
+.navbar-brand {
+    position: absolute;
+    bottom: 40px;
+}
+
 .nav-logo {
     position: absolute;
     width: 150px;
-    top: 20px;
-}
-
-@include media-breakpoint-down(sm) {
-    .nav-logo {
-        left: 40px;
-    }
-
-    .navbar-toggler {
-        margin-right: 16px;
-    }
+    top: 0px;
 }
 
 .jumbotron {

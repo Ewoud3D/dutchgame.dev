@@ -12027,6 +12027,11 @@ textarea.form-control-lg {
   transform: rotate(0deg);
 }
 
+@media (max-width: 575.98px) {
+  .navbar-toggler {
+    margin-right: 16px;
+  }
+}
 .nav-link {
   transition-duration: 0ms;
 }
@@ -12062,20 +12067,17 @@ textarea.form-control-lg {
   transform: translate(calc(-100% - 2px), -2px);
 }
 
+.navbar-brand {
+  position: absolute;
+  bottom: 40px;
+}
+
 .nav-logo {
   position: absolute;
   width: 150px;
-  top: 20px;
+  top: 0px;
 }
 
-@media (max-width: 575.98px) {
-  .nav-logo {
-    left: 40px;
-  }
-  .navbar-toggler {
-    margin-right: 16px;
-  }
-}
 .jumbotron {
   background-image: url("../img/SCHiM.png");
   background-size: cover;

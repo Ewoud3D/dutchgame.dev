@@ -12079,12 +12079,23 @@ textarea.form-control-lg {
 }
 
 .jumbotron {
+  z-index: -2;
   background-image: url("../img/SCHiM.png");
   background-size: cover;
   background-position: center;
   padding-top: 280px;
   padding-bottom: 280px;
   position: relative;
+}
+
+.jumbotron-video {
+  z-index: -1;
+  top: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .jumbotron > .container > h1, .jumbotron > .container > .h1 {

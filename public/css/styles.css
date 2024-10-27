@@ -3908,7 +3908,7 @@ textarea.form-control-lg {
 
 .navbar {
   --bs-navbar-padding-x: 0;
-  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-padding-y: 14px;
   --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
   --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
@@ -11972,7 +11972,6 @@ textarea.form-control-lg {
 }
 
 .navbar {
-  height: 70px;
   z-index: 1;
 }
 
@@ -11999,7 +11998,7 @@ textarea.form-control-lg {
 .toggler-icon {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 100%;
   background: #212529;
   border-radius: 1px;
@@ -12030,6 +12029,8 @@ textarea.form-control-lg {
 
 .nav-link {
   transition-duration: 0ms;
+  text-align: center;
+  margin: 20px 16px 0px 0px;
 }
 
 .nav-item {

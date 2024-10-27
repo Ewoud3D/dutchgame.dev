@@ -2,6 +2,7 @@
 
 $primary: #830EB0;
 $corner: 4em;
+$navbar-padding-y: 14px;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -12,7 +13,6 @@ $corner: 4em;
 }
 
 .navbar {
-    height: 70px;
     z-index: 1;
 }
 
@@ -39,7 +39,7 @@ $corner: 4em;
 .toggler-icon {
     display: block;
     position: absolute;
-    height: 4px;
+    height: 3px;
     width: 100%;
     background: $dark;
     border-radius: 1px;
@@ -70,8 +70,16 @@ $corner: 4em;
     transform: rotate(0deg);
 }
 
+// .collapsing {
+//     -webkit-transition: none;
+//     transition: none;
+//     display: none;
+// }
+
 .nav-link {
     transition-duration: 0ms;
+    text-align: center;
+    margin: 20px 16px 0px 0px;
 }
 
 .nav-item {

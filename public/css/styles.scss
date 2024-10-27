@@ -130,8 +130,7 @@ $navbar-padding-y: 14px;
 }
 
 .jumbotron {
-    z-index: -2;
-    background-image: url("../img/SCHiM.png");
+    // background-image: url("../img/SCHiM.png");
     background-size: cover;
     background-position: center; 
     padding-top: 280px;
@@ -139,7 +138,7 @@ $navbar-padding-y: 14px;
     position: relative;
 }
 
-.jumbotron-video {
+.jumbotron-background {
     z-index: -1;
     top: 0px;
     object-fit: cover;

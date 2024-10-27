@@ -12079,8 +12079,6 @@ textarea.form-control-lg {
 }
 
 .jumbotron {
-  z-index: -2;
-  background-image: url("../img/SCHiM.png");
   background-size: cover;
   background-position: center;
   padding-top: 280px;
@@ -12088,7 +12086,7 @@ textarea.form-control-lg {
   position: relative;
 }
 
-.jumbotron-video {
+.jumbotron-background {
   z-index: -1;
   top: 0px;
   -o-object-fit: cover;

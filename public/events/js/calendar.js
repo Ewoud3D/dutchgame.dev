@@ -32,6 +32,22 @@ document.addEventListener('DOMContentLoaded', function() {
 					🎉 Why: Meeting new people and having a good time
 					💰 Price: Its free
 					🥂 What should I bring: Some food or drinks that you would like to share with others (optionally also a game or project you would like to show)`,
+			},
+			{
+				title: 'Leeuwarden Tabletop Testing Night',
+				start: '2024-11-15T17:00:00',
+				end: '2024-11-15T22:30:00',
+				url: 'https://www.meetup.com/prototype-testing-meetup/events/304219824/',
+				description:
+					`Looking for people to test your game, or interested in playing people's creations? Come over to play boardgame prototypes! Your hosts for this evening are Friso Roolvink & Mitchel Bonnema.
+
+					We start at 19.00 hours, play until around 23.00 hours. We start with a pitching round by the game designers about the games that can be played. We aim to have all games playtested, while players can choose what to play. Usually we rotate after a play round (or more, or not depending on the playtime, small games vs an epic night long game).
+
+					To make sure not only our minds, but also our bodies are nourished, you are welcome to bring some drinks, booze, food or snacks.
+
+					To check for actual updates and to sign up as a designer please go to our Guild website and find the event post of that month. We also share more events and news there: spellenmaakgilde.net
+
+					Game on!`,
 			}
 		],
 		eventClick: function(info) {

@@ -1,0 +1,15 @@
+{
+  "name": "dutchgame.dev",
+  "version": "1.0.0",
+  "description": "DutchGame.Dev aims to be a community owned hub for everyone interested in game development in The Netherlands.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

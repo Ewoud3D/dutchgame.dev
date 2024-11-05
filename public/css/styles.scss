@@ -1,0 +1,254 @@
+// Include all of Bootstrap for now, TODO: optimize this
+
+$primary: #830EB0;
+$corner: 4em;
+$navbar-padding-y: 14px;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.navbar {
+    z-index: 1;
+}
+
+.navbar-toggler {
+    width: 26px;
+    height: 26px;
+    position: relative;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: $dark;
+    border-radius: 1px;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+// When navigation is clicked
+.navbar-toggler .top-bar {
+    margin-top: 0px;
+    transform: rotate(-45deg);
+}
+
+.navbar-toggler .bottom-bar {
+    margin-top: 0px;
+    transform: rotate(45deg);
+}
+
+// State when the navbar is collapsed
+.navbar-toggler.collapsed .top-bar {
+    margin-top: -15px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    margin-top: 15px;
+    transform: rotate(0deg);
+}
+
+@include media-breakpoint-down(sm) {
+    .navbar-toggler {
+        margin-right: 16px;
+    }
+}
+
+// .collapsing {
+//     -webkit-transition: none;
+//     transition: none;
+//     display: none;
+// }
+
+.nav-link {
+    transition-duration: 0ms;
+}
+
+@include media-breakpoint-down(lg) {
+    .nav-link {
+        text-align: center;
+        margin: 20px 16px 0px 0px;
+    }
+}
+
+.nav-item {
+    position: relative;
+    padding-left: 20px;
+    font-size: 18px;
+    font-family: "Poppins";
+}
+
+.nav-item:hover > a::before {
+    content: '.';
+    position: absolute;
+    color: $primary;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: $primary;
+    transform: translate(calc(-100% - 2px), -2px);
+}
+
+.active::before {
+    content: '.';
+    position: absolute;
+    color: $primary;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: $primary;
+    transform: translate(calc(-100% - 2px), -2px);
+}
+
+.navbar-brand {
+    position: absolute;
+    bottom: 40px;
+}
+
+.nav-logo {
+    position: absolute;
+    width: 150px;
+    top: 0px;
+}
+
+.jumbotron {
+    // background-image: url("../img/SCHiM.png");
+    background-size: cover;
+    background-position: center; 
+    padding-top: 280px;
+    padding-bottom: 280px;
+    position: relative;
+}
+
+@media (min-width: 1600px) {
+    .jumbotron {
+        padding-top: 330px;
+        padding-bottom: 330px;
+    }
+}
+
+.jumbotron-background {
+    z-index: -1;
+    top: 0px;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron > .container > h1 {
+    text-align: right;
+    font-family: "Poppins";
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.game-credits {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(36, 54, 66, 0.5);
+    border-radius: 10px;
+    padding: 4px 8px 4px 8px;
+    margin-bottom: 12px;
+}
+
+.game-credits > a {
+    text-decoration: none;
+    color: white;
+}
+
+.game-credits > a > .studio {
+    opacity: 0.7;
+}
+
+.news-item {
+    height: 340px;
+    padding-top: 12px;
+    margin-bottom: 70px;
+}
+
+.news-image {
+    filter: drop-shadow(0px 0px 6px rgba(0,0,0,0.2));
+}
+
+.news-image > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 8px;
+
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        100% 100%,
+        0% 100%
+    );
+
+    transition-duration: 80ms;
+}
+
+.news-item:hover > a > img {
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% calc(100% - $corner),
+        calc(100% - $corner) 100%,
+        0% 100%
+    );
+}
+
+.news-item > a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-card {
+    background: #9B7EBD;
+    color: #EEEEEE;
+    padding: 30px 30px 60px 30px;
+    margin: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 6px rgba(0,0,0,0.2));
+}
+
+.info-card > h1 {
+    font-size: 60px;
+}
+
+.sponsor-logo {
+    transition-duration: 100ms;
+    max-height: 200px;
+}
+
+.sponsor-logo > img {
+    width: 100%;
+    height: 100%;
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    margin-bottom: 0px;
+}

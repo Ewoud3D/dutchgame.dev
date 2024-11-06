@@ -1,2 +1,0 @@
-const gCalendarApiKey = '';
-const gCalendarId = '';

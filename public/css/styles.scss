@@ -6,6 +6,10 @@ $navbar-padding-y: 14px;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+:root {
+    --fc-button-bg-color: #830EB0;
+}
+
 .poppins-medium {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -138,13 +142,6 @@ $navbar-padding-y: 14px;
     position: relative;
 }
 
-@media (min-width: 1600px) {
-    .jumbotron {
-        padding-top: 330px;
-        padding-bottom: 330px;
-    }
-}
-
 .jumbotron-background {
     z-index: -1;
     top: 0px;
@@ -220,6 +217,28 @@ $navbar-padding-y: 14px;
 .news-item > a {
     text-decoration: none;
     font-weight: bold;
+}
+
+.calendar-container {
+    background: white;
+    z-index: 2;
+    transform: translateY(-200px);
+    padding: 30px;
+    -webkit-box-shadow: 0px 8px 60px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 8px 60px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 60px 0px rgba(0,0,0,0.2);
+}
+
+.fc-daygrid-day-number {
+    text-decoration: none; 
+}
+
+.fc-col-header-cell-cushion {
+    text-decoration: none; 
+}
+
+.fc-event:hover {
+    cursor: pointer;
 }
 
 .info-card {

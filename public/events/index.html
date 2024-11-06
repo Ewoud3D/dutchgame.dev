@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>DutchGame.Dev</title>
+        <title>Events - DutchGame.Dev</title>
         <meta name="description" content="DutchGame.Dev aims to be a community owned hub for everyone interested in game development in The Netherlands.">
 
         <meta charset="utf-8">
@@ -11,13 +11,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="css/styles.css?v=1.1">
+        <link rel="stylesheet" href="../css/styles.css?v=1.1">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="Logo.svg" class="nav-logo">
+                    <img src="../Logo.svg" class="nav-logo">
                 </a>
                 <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="toggler-icon top-bar"></span>
@@ -26,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/events">Events</a>
+                            <a class="nav-link active" href="/events">Events</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://dutchgameindustry.directory/">Companies</a>
@@ -43,55 +43,36 @@
         </nav>
 
         <div class="jumbotron">
-            <img class="jumbotron-background" src="img/SCHiM.png"> <!-- in case the video doesn't load -->
-            <video class="jumbotron-background" autoplay muted playsinline loop>
-                <source src="https://i.imgur.com/qQaDJpB.mp4" type="video/mp4">
-            </video>
+            <img class="jumbotron-background" src="background.webp">
             <div class="container">
-                <span class="game-credits"><a href="https://schimgame.com/" target="_blank">SCHiM<span class="studio"> - Extra Nice</span></a></span>
-                <h1 class="display-4">Your Adventure<br>Starts Here!</h1>
+                <h1 class="display-4" style="text-align: left;">Always be in the know!</h1>
+                <span class="game-credits" style="left: 8px;"><a href="https://extra-nice.itch.io/skirmish" target="_blank">Skirmish<span class="studio"> - Extra Nice</span></a></span>
             </div>
         </div>
 
-        <br>
-
-        <div class="container">
-            <h1 class="text-muted">Latest News</h1>
-            <div class="row">
-                <div class="news-item col-6">
-                    <a class="news-image" href="https://dutchgame.dev/mix"><img src="img/dgd.webp"></a>
-                    <a href="https://dutchgame.dev/mix" class="text-muted">Open Dev Mix</a>
-                    <a href="https://dutchgame.dev/mix" class="text-dark"><h4>Signup for next Dev Mix announced!</h4></a>
-                </div>
-                <div class="news-item col-6">
-                    <a class="news-image" href="#"><img src="img/dgd.webp"></a>
-                    <a href="#" class="text-muted">DutchGame.Dev</a>
-                    <a href="#" class="text-dark"><h4>New Website Revealed</h4></a>
-                </div>
-            </div>
-            
-            <br><br>
-
-            <div class="info-card">
-                <h1>Community Owned</h1>
-                <h5>DutchGame.Dev is a community owned hub for everyone interested in game development in The Netherlands.<br><br>For that reason DutchGame.Dev is developed <a target="_blank" href="https://github.com/Ewoud3D/dutchgame.dev">Open Source</a>.</h5>
-            </div>
-
-            <br><br><br><br><br>
-
-            <h1 class="text-muted">DutchGame.Dev is sponsored by:</h1>
-            <br>
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="row col">
-                    <a href="https://extra-nice.net/" target="_blank" class="sponsor-logo col"><img src="logo/extra-nice.svg"></a>
-                    <a href="https://ewoud.dev/" target="_blank" class="sponsor-logo col"><img src="logo/ewoud-van-der-werf.svg"></a>
-                </div>
-                <div class="col-2"></div>
-            </div>
-
-            <br><br><br>
+        <div class="container calendar-container">
+            <div id='calendar'></div>
         </div>
+
+        <div class="modal fade" id="eventView" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">Event Title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalBody">Event Description</p>
+                    <p id="modalLocation"></p>
+                </div>
+                <div class="modal-footer">
+                    <a id="modalButton" type="button" class="btn btn-primary" href="" target="_blank">I'm interested!</a>
+                </div>
+                </div>
+            </div>
+        </div>
+          
+
         <footer class="py-3 bg-secondary">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
               <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Events</a></li>
@@ -102,5 +83,9 @@
             <p class="text-center text-body-secondary">DutchGame.Dev<br>EST. 2024</p>
         </footer>
     </body>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.15/index.global.min.js'></script>
+    <script src="js/google-calendar.js"></script>
+    <script src="js/calendar.js?v=1.1"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </html>

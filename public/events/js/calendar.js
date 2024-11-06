@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	var calendarEl = document.getElementById('calendar');
 
 	let calendar = new FullCalendar.Calendar(calendarEl, {
-		googleCalendarApiKey: 'AIzaSyAqMSEolrwzR3TRbZrtEegEQ8OELp9h6h0',
+		googleCalendarApiKey: gCalendarApiKey,
 		events: {
-			googleCalendarId: '6279774b7ecc853e5df6857e773a2a3871e5f675b6ee46e13d10ee7b64d5b5d1@group.calendar.google.com'
+			googleCalendarId: gCalendarId
 		},
 		initialView: 'dayGridMonth',
 		timeZone: 'Europe/Amsterdam',

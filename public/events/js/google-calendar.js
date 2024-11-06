@@ -1,0 +1,2 @@
+const gCalendarApiKey = '';
+const gCalendarId = '';

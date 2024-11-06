@@ -12127,34 +12127,32 @@ textarea.form-control-lg {
 }
 
 .news-item {
-  height: 340px;
-  padding-top: 12px;
-  margin-bottom: 70px;
+  position: relative;
+  padding: 0px;
 }
 
-.news-image {
-  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
-}
-
-.news-image > img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.news-item img {
+  position: absolute;
+  top: 0px;
   width: 100%;
   height: 100%;
-  margin-bottom: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 14px;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
   transition-duration: 80ms;
 }
 
-.news-item:hover > a > img {
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 4em), calc(100% - 4em) 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 4em), calc(100% - 4em) 100%, 0% 100%);
+.news-item:hover > img {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 6em), calc(100% - 6em) 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 6em), calc(100% - 6em) 100%, 0% 100%);
 }
 
-.news-item > a {
-  text-decoration: none;
-  font-weight: bold;
+.news-item:before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* initial ratio of 1:1*/
 }
 
 .calendar-container {

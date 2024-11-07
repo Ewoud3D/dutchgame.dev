@@ -201,7 +201,7 @@ $navbar-padding-y: 14px;
     transition-duration: 80ms;
 }
 
-.news-item:hover > img {
+.news-item:hover img {
     clip-path: polygon(
         0% 0%,
         100% 0%,

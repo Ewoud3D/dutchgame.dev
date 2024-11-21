@@ -4,7 +4,7 @@ RefreshFeed();
 
 async function RefreshFeed()
 {
-	const url = "https://feeds.behold.so/5bVQOJtAAMkPv5AyUDx8";
+	const url = "https://feeds.behold.so/Vjz8jupWFtbcVswslBtW";
 	try
 	{
 		const response = await fetch(url);
@@ -25,7 +25,7 @@ async function RefreshFeed()
 		{
 			feed.innerHTML += 
 				`<a class="col-sm-6 col-lg-4 news-item" href="${data.posts[i].permalink}" target="_blank">
-					<img src="${data.posts[i].thumbnailUrl}"/>
+					<img src="${data.posts[i].mediaUrl}"/>
 				</a>`;
 		} 
 	}
